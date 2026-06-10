@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'r4t2.git.storm'
+version = '1.0.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.opencollab.dev/main/' }
+}
+
+dependencies {
+    compileOnly 'org.geysermc.geyser:api:2.0.0-SNAPSHOT'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    relocate 'com.google.gson', 'r4t2.git.storm.libs.gson'
+}
+
+build.dependsOn shadowJar

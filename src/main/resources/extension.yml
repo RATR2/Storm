@@ -1,0 +1,8 @@
+id: storm
+name: Storm
+version: 1.0.0-SNAPSHOT
+authors:
+  - r4t2
+description: "Converts Java Edition resource packs (.zip) to Bedrock .mcpack + Geyser item/font mappings"
+main: r4t2.git.storm.StormExtension
+dependencies: []
