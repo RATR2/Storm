@@ -1,0 +1,3 @@
+pack-path: "plugins/CraftEngine/build.zip"
+output-dir: "plugins/Geyser-Spigot/custom_mappings"
+debug: false
